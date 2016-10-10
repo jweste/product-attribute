@@ -41,4 +41,15 @@
             </field>
         </field>
     </record>
+
+        <record id="product_normal_action_print" model="ir.actions.act_window">
+            <field name="name">Product</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.product</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="view_product_product_search_print"/>
+            <field name="view_id" eval="False"/> <!-- Force empty -->
+            <field name="context">{'search_default_category_print_id': [active_id], 'search_category_print_id': active_id}</field>
+        </record>
 </odoo>
